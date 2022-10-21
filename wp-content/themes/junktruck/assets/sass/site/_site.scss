@@ -1,0 +1,119 @@
+.site {
+	@include hyphens(auto);
+	overflow: hidden;
+	&-logo {
+		margin: 0;
+		@include font-size(32/16);
+		line-height: 1.2;
+		text-transform: lowercase;
+		font-weight: 700;
+	}
+	&-header.container,
+	&-breadcrumbs.container,
+	&-content.container,
+	&-footer.container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	&-breadcrumbs {
+		margin-top: 20px;
+	}
+	&-content {
+		body:not(.page-template-fullwidth-content) & {
+			//margin-top: 30px;
+			//margin-bottom: 30px;
+		}
+	}
+	&-main {
+		>*:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&-content__wrap {
+		margin-top: $site-content-top-indent;
+		margin-bottom: $site-content-bottom-indent;
+
+		.widget-area{
+			position: relative;
+
+			.position-one-right-sidebar &,
+			.position-one-left-sidebar & {
+				@include media-breakpoint-up(lg) {
+					&:before {
+						position: absolute;
+						width: 1px;
+						height: 100%;
+						content: '';
+						top: 0;
+					}
+				}
+			}
+
+			.position-one-right-sidebar & {
+				@include media-breakpoint-up(lg) {
+					padding-left: $grid-gutter-width * 1.5;
+
+					&:before {
+						left: 20px;
+					}
+				}
+			}
+			.position-one-left-sidebar & {
+				@include media-breakpoint-up(lg) {
+					padding-right: $grid-gutter-width * 1.5;
+
+					&:before {
+						right: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#secondary {
+	@include media-breakpoint-down(sm) {
+		margin-top: 40px;
+	}
+}
+
+.space-between-content {
+	@include space-between-content;
+}
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+
+@import "primary/header";
+
+/*--------------------------------------------------------------
+## Top panel
+--------------------------------------------------------------*/
+
+@import "primary/top-panel";
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+
+@import "primary/footer";
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Single post
+--------------------------------------------------------------*/
+
+@import "primary/single-post";
+
+/*--------------------------------------------------------------
+## Sticky 
+--------------------------------------------------------------*/
+
+@import "primary/sticky";

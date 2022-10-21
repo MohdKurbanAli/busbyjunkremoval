@@ -1,0 +1,92 @@
+.widget_recent_entries a,
+.widget_recent_comments a,
+.widget_recent_comments .comment-author-link{
+	color: $accent_color;
+}
+.widget_recent_comments li > a {
+	color: $link_hover_color;
+}
+.widget_recent_entries a:hover,
+.widget_recent_comments a:hover,
+.widget_recent_comments li > a:hover {
+	color: $accent_color_4;
+}
+
+.widget_archive a:before,
+.widget_nav_menu a:before,
+.widget_categories a:before,
+.wp-block-archives-list a:before,
+.wp-block-categories-list a:before{
+	background-color: $accent_color;
+}
+
+.widget_nav_menu ul li a{
+	color: $primary_text_color;
+}
+.widget_nav_menu ul li a:hover{
+	color: $accent_color;
+}
+.widget_nav_menu ul li a:hover:before{
+	background-color: $link_hover_color;
+}
+
+/* #Widget Calendar */
+.widget_calendar thead,
+.widget_calendar tbody,
+.widget_calendar tbody td:not(.pad){
+	color: $primary_text_color; /* new */
+}
+
+.widget_calendar caption {
+	color: $invert_text_color; /* new */
+	background-color: $accent_color; /* new */
+	font-family: @font_family( $h6_font_family );
+	font-size: $h6_font_size{px};
+}
+
+.widget_calendar th {
+	color: $link_hover_color; /* new */
+}
+
+.widget_calendar th:after {
+	background-color: $grey_color_3; /* new */
+}
+
+.widget_calendar tbody td a {
+	color: $invert_text_color; /* new */
+	background-color: $accent_color; /* new */
+}
+
+.widget_calendar tbody td a:hover {
+	color: $invert_text_color; /* new */
+	background-color: $link_hover_color; /* new */
+}
+
+.widget_calendar tbody td#today {
+	color: $accent_color; /* new */
+}
+
+.widget_calendar tfoot a:before {
+	background-color: @alpha($invert_text_color, 30); /* new */
+}
+
+.widget_calendar tfoot a:hover:before {
+	background-color: $invert_text_color; /* new */
+}
+
+
+/* #Widget Search Form */
+.widget_search .search-form__submit:hover path{
+	fill: $accent_color;
+}
+
+/* #Widget Tags */
+.widget_tag_cloud .tagcloud a {
+	border-color: $grey_color_2;
+	color: $primary_text_color;
+}
+.widget_tag_cloud .tagcloud a:hover {
+	background-color: $accent_color;
+	border-color: $accent_color;
+	color: $invert_text_color;
+}

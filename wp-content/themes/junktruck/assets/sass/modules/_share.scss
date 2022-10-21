@@ -1,0 +1,71 @@
+.share-btns {
+	&__list {
+		position: relative;
+		line-height: 1;
+		margin-top:5px !important;
+	}
+	&__items {
+		@include grid-indent(4px);
+	}
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+	}
+	&__link {
+		line-height: 1.5em;
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		line-height: 0;
+		position: relative;
+		transition: .3s;
+		padding: 8px 7px;
+		.google-plus-item & {
+			> svg {
+				width: 22px;
+				height:	19px;
+			}
+			padding: 8px 6px;
+		}
+		//svg icons controls
+		> svg {
+			line-height: 1em;
+			height: auto;
+			width: 18px;
+			height:	18px;
+			position: relative;
+			fill: inherit;
+			z-index: 1;
+			> path {
+				fill: inherit;
+				vertical-align: middle;
+				transition: all .25s;
+			}
+		}
+
+		&:before {
+			$size: 35px;
+
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: $size;
+			height: $size;
+			margin: $size/-2 0 0 $size/-2;
+			transition: .3s;
+			border-radius: 50%;
+			transform: scale(.5);
+			z-index: 1;
+			opacity: 0;
+		}
+
+		&:hover:before {
+			transform: scale(1);
+			opacity: 1;
+		}
+		&:hover path {
+			transition: all 0.25s ease;
+		}
+	}
+}

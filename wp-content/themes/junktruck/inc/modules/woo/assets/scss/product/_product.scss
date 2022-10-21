@@ -1,0 +1,41 @@
+/**
+ * Product main styles
+ */
+.products{
+
+	a:focus{
+		outline: none;
+	}
+
+	.product{
+		margin: 0 0 32px;
+
+		.woocommerce-loop-product__link {
+			position: relative;
+			display: block;
+			font-size: 0;
+
+			&:before{
+				content: '';
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				opacity: 0;
+				-webkit-transition: opacity 0.3s ease-out;
+				-o-transition: opacity 0.3s ease-out;
+				transition: opacity 0.3s ease-out;
+			}
+
+			&:hover:before{
+				opacity: 1;
+			}
+		}
+
+		.button{
+			margin-top: 10px;
+		}
+	}
+}

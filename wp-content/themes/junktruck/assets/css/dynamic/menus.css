@@ -1,0 +1,53 @@
+/* #Main Menu */
+.main-navigation {
+	font-style: $menu_font_style;
+	font-weight: $menu_font_weight;
+	font-size: $menu_font_size{px};
+	font-family: @font_family( $menu_font_family );
+}
+.main-navigation .menu > li > a{
+	text-transform: $menu_text_transform;
+	line-height: $menu_line_height;
+	color: $link_hover_color;
+	letter-spacing: $menu_letter_spacing{px};
+}
+
+.main-navigation a{
+	color: $secondary_text_color;
+}
+.menu-item-has-children:before,
+.menu-item-has-children:after {
+	background-color: $primary_text_color;
+}
+
+.main-navigation a:hover,
+.main-navigation ul.menu > li > a:hover,
+.main-navigation ul.menu > li.current-page-ancestor > a,
+.main-navigation .current_page_item>a,
+.main-navigation .current-menu-item>a,
+.main-navigation .current_page_ancestor>a,
+.main-navigation .current-menu-ancestor>a {
+	color: $link_color;
+}
+
+/* Main Sub Menu */
+.main-navigation .sub-menu a {
+	color: $primary_text_color;
+}
+.main-navigation .sub-menu a:hover,
+.main-navigation .sub-menu li.current_page_item > a,
+.main-navigation .sub-menu li.current_page_ancestor > a,
+.main-navigation .sub-menu li.current-menu-item > a,
+.main-navigation .sub-menu li.current-menu-ancestor > a {
+	color: $link_color;
+}
+
+.main-navigation .sub-menu > li > a:before{
+	background-color: $link_color;
+}
+
+/* #Mobile Menu */
+.mobile-menu-toggle-button {
+	color: $invert_text_color;
+	background-color: $accent_color;
+}

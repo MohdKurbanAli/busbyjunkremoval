@@ -1,0 +1,134 @@
+/* #Breadcrumbs */
+.breadcrumbs {
+	background-color: $breadcrumbs_bg_color;
+	background-repeat: $breadcrumbs_bg_repeat;
+	background-attachment: $breadcrumbs_bg_attachment;
+	background-size: $breadcrumbs_bg_size;
+	@background_url( $breadcrumbs_bg_image );
+	@background_position( $breadcrumbs_bg_position );
+	padding-top: $breadcrumbs_padding_y_mobile{px};
+	padding-bottom: $breadcrumbs_padding_y_mobile{px};
+}
+
+@media (min-width: 768px) {
+	.breadcrumbs {
+		padding-top: $breadcrumbs_padding_y_tablet{px};
+		padding-bottom: $breadcrumbs_padding_y_tablet{px};
+	}
+}
+
+@media (min-width: 1200px) {
+	.breadcrumbs {
+		padding-top: $breadcrumbs_padding_y{px};
+		padding-bottom: $breadcrumbs_padding_y{px};
+	}
+}
+
+.breadcrumbs_content {
+	font-style: $breadcrumbs_font_style;
+	font-weight: $breadcrumbs_font_weight;
+	font-size: $breadcrumbs_font_size{px};
+	line-height: $breadcrumbs_line_height;
+	font-family: @font_family( $breadcrumbs_font_family );
+	letter-spacing: $breadcrumbs_letter_spacing{em};
+	text-transform: $breadcrumbs_text_transform;
+}
+
+.invert.breadcrumbs {
+	color: $invert_text_color;
+}
+.breadcrumbs_browse,
+.breadcrumbs_item,
+.breadcrumbs_item a {
+	color: @contrast($breadcrumbs_bg_color, $invert_text_color, $primary_text_color);
+}
+.invert.breadcrumbs .breadcrumbs_item a:hover {
+	border-bottom-color: $invert_text_color;
+	color: $invert_text_color;
+	text-decoration: underline;
+}
+
+
+/* #Post navigation */
+.post-navigation i {
+	color: $secondary_text_color;
+}
+.post-navigation .nav-links a:hover .post-title,
+.post-navigation .nav-links a:hover .nav-text {
+	color: $link_color;
+}
+
+.post-navigation .nav-links a:hover i {
+	color: $link_hover_color;
+}
+
+/* #Pagination */
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	border-color: $grey_color_2;
+}
+.comment-navigation a,
+.post-navigation a {
+	color: $invert_text_color;
+	background-color: $accent_color;
+}
+.posts-navigation a {
+	color: $accent_color;
+}
+.posts-navigation path {
+	fill: $accent_color;
+}
+.post-navigation a:hover{
+	background-color: $accent_color_4;
+}
+.post-navigation a path{
+	fill: $invert_text_color;
+}
+
+/* Blog Posts Pagination */
+.pagination{
+	border-color: $grey_color_2;
+}
+.pagination .page-numbers,
+.pagination .page-numbers.dots:hover{
+	color: $primary_text_color;
+	border-color: $grey_color_2;
+}
+.pagination .page-numbers:hover,
+.pagination .page-numbers.current{
+	color: $invert_text_color;
+	background-color: $accent_color;
+	border-color: $accent_color;
+}
+.pagination .nav-links .next.page-numbers,
+.pagination .nav-links .prev.page-numbers{
+	color: $link_color;
+
+	font-family: @font_family( $h6_font_family );
+	font-style: $h6_font_style;
+	font-weight: $h6_font_weight;
+	font-size: @font_size($h6_font_size, multiple, ceil, 0.75)px;
+	letter-spacing: $h6_letter_spacing{em};
+}
+.pagination .nav-links .next.page-numbers:hover,
+.pagination .nav-links .prev.page-numbers:hover{
+	color: $accent_color_3;
+}
+.pagination .nav-links path{
+	fill: $accent_color;
+}
+.pagination .nav-links .next.page-numbers:hover path,
+.pagination .nav-links .prev.page-numbers:hover path{
+	fill: $accent_color_3;
+}
+
+
+.entry-content .page-links a.post-page-numbers{
+	color: $primary_text_color;
+}
+.entry-content .page-links .post-page-numbers.current,
+.entry-content .page-links a.post-page-numbers:hover{
+	font-weight: bold;
+	color: $link_color;
+}

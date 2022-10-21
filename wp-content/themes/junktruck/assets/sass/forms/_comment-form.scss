@@ -1,0 +1,70 @@
+.comment {
+	&-respond {
+		.comment-list + & {
+			padding-top:36px;
+			border-top: 1px solid;
+		}
+		.comment-list & {
+			margin-top: 60px;
+			margin-bottom: 60px;
+		}
+	}
+	&-reply-title {
+		#cancel-comment-reply-link {
+			font-size: 12px;
+			float: right;
+			margin-left: 10px;
+		}
+	}
+	&-form {
+		@include grid-indent(2.5px);
+		display: flex;
+		flex-wrap: wrap;
+
+		> * {
+			width: 100%;
+		}
+
+		&-comment,
+		&-author,
+		&-email,
+		&-url {
+			position: relative;
+			margin: 0 0 20px 0;
+		}
+
+		&-author,
+		&-email {
+			@include media-breakpoint-up(xl) {
+
+				.comment-list & {
+					width: 100%;
+				}
+			}
+		}
+		&__field {
+			width: 100%;
+			vertical-align: top;
+		}
+		.form-submit {
+			margin: 20px 0 0 0;
+		}
+		
+		&-cookies-consent {
+			margin-top:0;
+			margin-bottom:25px;
+			user-select: none;
+			input[type='checkbox'] {
+				padding:0;
+				margin-right:5px;
+				margin-top:-3px;
+			}
+		}
+
+	}
+}
+
+
+.bypostauthor {
+	display: block;
+}

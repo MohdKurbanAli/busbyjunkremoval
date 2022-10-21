@@ -1,0 +1,71 @@
+/**
+ * Messages
+ */
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error{
+	overflow: hidden;
+	position: relative;
+	list-style: none;
+	width: 100%;
+	padding: 1em 2em 1em 3.5em;
+    margin: 0 0 2em;
+	line-height: 2;
+	font-size: 12px;
+    color: #515151;
+    border-radius: $wc-border-radius;
+    background-color: #f7f6f7;
+
+    .woocommerce-form-coupon-toggle & {
+    	background-color: transparent;
+    }
+	
+	@media (max-width: 767px) {
+		margin-bottom: 20px;
+	}
+	
+	&:before{
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0px 7px 0 -25px;
+		font-size: 20px;
+
+		@extend %icon-font-default;
+	}
+	
+	> *{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	.button{
+		float: right;
+		padding: 0;
+		background-color: transparent;
+		
+		&.wc-forward{
+			margin-left: 20px;
+			padding: 0;
+			background: none;
+		}
+	}
+	
+}
+
+.woocommerce-message{
+	&:before{
+		content: $wc-messages-icon-default;
+	}
+}
+
+.woocommerce-error{
+	&:before{
+		content: $wc-messages-icon-error;
+	}
+}
+
+.woocommerce-info{
+	&:before{
+		content: $wc-messages-icon-info;
+	}
+}

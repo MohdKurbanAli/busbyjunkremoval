@@ -1,0 +1,14 @@
+/**
+ * Product grid styles
+ */
+.products.products-grid{
+	.button{
+		border-radius: $wc-button-border-radius;
+	}
+	
+	.product{
+		img{
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+/* #Social */
+.social-list a {
+	color: $secondary_text_color;
+}
+
+.social-list a:hover {
+	color: $accent_color;
+}
+
+/* #Share btns */
+.share-btns__link svg {
+	fill: $link_color;
+}
+.share-btns__link:hover svg {
+	fill: $invert_text_color;
+}
+
+.share-btns__link:hover {
+	color: $invert_text_color;
+}
+
+.share-btns__link:hover:before {
+	background-color: $link_hover_color;
+}

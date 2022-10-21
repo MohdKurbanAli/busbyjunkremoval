@@ -1,0 +1,35 @@
+.search-form {
+	position: relative;
+	display: block;
+	
+	&__field[type='search'] {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		height: 45px;
+    	min-width: 50px;
+		box-sizing: border-box;
+	}
+	&__submit{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 45px;
+		height: 45px;
+		padding: 0;
+		text-align: center;
+		color: inherit;
+		background: none !important;
+
+		svg{
+			display: inline-block;
+			vertical-align: middle;
+			width: 16px;
+			height: 16px;
+		}
+		path{
+			fill: #232c3d;
+			transition: fill .2s ease-out;
+		}
+	}
+}

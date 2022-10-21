@@ -1,0 +1,43 @@
+/**
+ * Archive panel
+ */
+
+// Archive title
+.woocommerce-products-header__title.page-title {
+	margin: 0 0 30px;
+	text-align:inherit;
+	font-size: 32px;
+	line-height: 42px;
+}
+
+.woocommerce-products-header{
+	.page-description,
+	.term-description{
+		margin-bottom: 30px;
+	}
+}
+
+.site-content__wrap {
+	.archive.woocommerce.position-one-left-sidebar &,
+	.archive.woocommerce.position-one-right-sidebar & {
+		padding-top: 0;
+	}
+}
+
+// Panel
+.woocommerce-products__panel {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 0 14px;
+	align-items: center;
+	
+	&:empty{
+		display: none!important;
+	}
+}
+
+// Result count
+.woocommerce-result-count {
+	margin: 0;
+}

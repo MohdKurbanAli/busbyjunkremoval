@@ -1,0 +1,54 @@
+.breadcrumbs {
+	position: relative;
+	.row {
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&_title {
+		.breadcrumbs_page-title {
+			margin:0;
+			text-transform: uppercase;
+		}
+	}
+
+	&_title,
+	&_items {
+		padding-left: $grid-gutter-width/2;
+		padding-right: $grid-gutter-width/2;
+	}
+
+	&_browse {
+		display: inline-block;
+		margin-right: .5em;
+	}
+	&_wrap {
+		margin: 6px 0;
+		display: inline-block;
+	}
+	&_item {
+		display: inline-block;
+		text-transform: uppercase;
+
+		&_sep {
+			margin: 0 2px;
+		}
+		&_link {
+
+			.invert & {
+
+				border-bottom: 1px solid transparent;
+				&:hover {
+					color: inherit;
+				}
+			}
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		&_target {
+			text-decoration: underline;
+		}
+	}
+}

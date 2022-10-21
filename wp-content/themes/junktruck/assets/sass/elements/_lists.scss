@@ -1,0 +1,73 @@
+ul, ol {
+	margin: 0 0 1.5em 1.5em;
+	padding-left:0;
+	padding-right:0;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+
+ul:not([class]) {
+	.entry-content &,
+	.comment-content &,
+	.wc-tab & {
+		list-style: none;
+		margin: 0 0 25px 0;
+		padding-left: 0;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+		p + & {
+			margin-top: 25px;
+		}
+
+		li {
+			& + li,
+			> ul li,
+			> ol li {
+				margin-top: 5px;
+			}
+		}
+
+		> li {
+			&:before {
+				@extend %widget-blog-list-icon-before;
+			}
+			> ul,
+			> ol {
+				margin-bottom: 0;
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+/* Inline list */
+.inline-list {
+	@include reset-list;
+	li {
+		display: inline-block;
+		vertical-align: top;
+	}
+}

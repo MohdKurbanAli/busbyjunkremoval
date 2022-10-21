@@ -1,0 +1,172 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+blockquote,
+q {
+	quotes: none;
+	&:before,
+	&:after {
+		content: '';
+	}
+}
+
+blockquote,
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large{
+	position: relative;
+	margin: 33px 0;
+	text-align: left;
+	padding: 30px;
+
+	@include media-breakpoint-up(lg) {
+		padding: 32px 50px 32px 85px;
+	}
+
+	.post-featured-content & {
+		text-align: center;
+		padding: 30px;
+
+		@include media-breakpoint-up(lg) {
+			padding: 39px 50px 35px;
+		}
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	cite {
+		display: block;
+		margin-top: 13px;
+
+		.post-featured-content & {
+			margin-top: 14px;
+		}
+		&:before {
+			content: "— ";
+		}
+
+		br:first-child{
+			display: none;
+		}
+	}
+	&:before {
+		content: '';
+		display: block;
+		margin-bottom: 20px;
+		width: 23px;
+		height: 23px;
+		background-position: center;
+		background-repeat: no-repeat;
+		-webkit-mask-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 75.999 75.999" xml:space="preserve"><path d="M14.579,5C6.527,5,0,11.716,0,20c0,8.285,6.527,15,14.579,15C29.157,35,19.438,64,0,64v7 C34.69,71,48.286,5,14.579,5z M56.579,5C48.527,5,42,11.716,42,20c0,8.285,6.527,15,14.579,15C71.157,35,61.438,64,42,64v7 C76.69,71,90.286,5,56.579,5z"/></svg>');
+				mask-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 75.999 75.999" xml:space="preserve"><path d="M14.579,5C6.527,5,0,11.716,0,20c0,8.285,6.527,15,14.579,15C29.157,35,19.438,64,0,64v7 C34.69,71,48.286,5,14.579,5z M56.579,5C48.527,5,42,11.716,42,20c0,8.285,6.527,15,14.579,15C71.157,35,61.438,64,42,64v7 C76.69,71,90.286,5,56.579,5z"/></svg>');
+		transform: rotate(180deg);
+
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			top: 39px;
+			left: 40px;
+			margin-bottom: 0;
+		}
+
+		.post-featured-content & {
+			position: relative;
+			margin-bottom: 15px;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	p:first-child{
+		br{
+			display: none;
+		}
+	}
+}
+
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin: 1.5em 0;
+}
+
+.edit-link {
+	display: inline-block;
+	margin-top: 25px;
+}
+
+
+/* Table Styles */
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+.hentry {
+	table:not([class]) {
+		margin: 0 0 2.43em;
+		max-width: 100%;
+
+		th,
+		td {
+			padding: 5px;
+			vertical-align: top;
+			text-align: center;
+
+			& + td,
+			& + th {
+				border-left: 1px solid;
+			}
+		}
+		thead th {
+			vertical-align: bottom;
+		}
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		& + table {
+			margin: 32px 0;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+## Lists
+--------------------------------------------------------------*/
+
+@import "lists";
+/*--------------------------------------------------------------
+## ToTop
+--------------------------------------------------------------*/
+
+@import "totop-button";
+/*--------------------------------------------------------------
+## Page preloader
+--------------------------------------------------------------*/
+
+@import "page-preloader";

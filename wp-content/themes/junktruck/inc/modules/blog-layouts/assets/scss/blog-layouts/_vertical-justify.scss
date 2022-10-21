@@ -1,0 +1,102 @@
+/*--------------------------------------------------------------
+### Justify Posts List
+--------------------------------------------------------------*/
+@mixin transition($transition...) {
+	transition: $transition;
+}
+$color__nothumb: $color__lightblue;
+
+.posts-list {
+	/*-----------------------
+	### Justify layouts styles
+	------------------------*/
+	/* vertical-justify list */
+	&--vertical-justify {
+		display: flex;
+		margin-right: -$grid-gutter-width / 2;
+		margin-left: -$grid-gutter-width / 2;
+		flex-flow: row wrap;
+		>.post {
+			flex: 1 0 calc(100%/3 - #{$grid-gutter-width});
+			max-width: calc(100%/3 - #{$grid-gutter-width});
+			margin-right: $grid-gutter-width / 2;
+			margin-left: $grid-gutter-width / 2;
+			&:nth-child(7n + 2),
+			&:nth-child(7n + 3) {
+				flex: 1 0 calc(100%/1.5 - #{$grid-gutter-width});
+				max-width: calc(100%/1.5 - #{$grid-gutter-width});
+			}
+		}
+		&.list-style-default>.post {
+			@include media-breakpoint-down(md) {
+				flex: 1 0 calc(100%/2 - #{$grid-gutter-width});
+				max-width: calc(100%/2 - #{$grid-gutter-width});
+				&:nth-child(7n + 2),
+				&:nth-child(7n + 3) {
+					flex: 1 0 calc(100%/2 - #{$grid-gutter-width});
+					max-width: calc(100%/2 - #{$grid-gutter-width});
+				}
+			}
+			@include media-breakpoint-down(xs) {
+				flex: 1 0 calc(100% - #{$grid-gutter-width});
+				max-width: calc(100% - #{$grid-gutter-width});
+				&:nth-child(7n + 2),
+				&:nth-child(7n + 3) {
+					flex: 1 0 calc(100% - #{$grid-gutter-width});
+					max-width: calc(100% - #{$grid-gutter-width});
+				}
+			}
+		}
+	}
+	/*------------------ layouts Styles -------------------*/
+	&__item {
+		&.justify-item {
+			margin-bottom: 50px;
+			.entry {
+				&-header {
+					.entry-meta {
+						display: flex;
+						flex-wrap: wrap;
+						margin-bottom: 2px;
+					}
+				}
+				&-title {
+					margin: 4px 0 10px;
+				}
+				&-content {
+					margin-bottom: 18px;
+					p {
+						margin: 0 0 0.43em;
+					}
+				}
+				&-footer{
+					.tags-links {
+						display: inline-block;
+						padding-right: 20px;
+					}
+					&-bottom{
+						margin-top: 26px;
+					}
+				}
+			}
+			.post-thumbnail__link{
+				display: block;
+				margin-bottom: 20px;
+				.justify-item__thumbnail {
+					display: block;
+					border-radius: $button__border-radius;
+					position: relative;
+					background-size: cover;
+					background-position: center;
+					min-height: 220px;
+					@include media-breakpoint-up(md) {
+						min-height: 250px;
+					}
+					@include media-breakpoint-up(lg) {
+						min-height: 370px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+/**
+ * Product meta
+ */
+.product_meta {
+	margin: 0 0 18px;
+
+	> span {
+		display: block;
+		margin-bottom: 8px;
+		font-weight: 700;
+		line-height: 21px;
+		font-size: $wc-product-meta-fz;
+
+		a,
+		span {
+			font-weight: 400;
+		}
+	}
+}
